@@ -7,16 +7,20 @@ Created on Fri Mar 11 14:21:23 2022
 
 import math
 import operator
-x=input("list to be multiplied (no space or camma):")
-y=list(x)
-z=list(map(int, x))
-print("given list to be multiplied",z)
-a=input("constant to be multiplied:")
+lst_1=[]
+n=int(input("enter the number of elements:"))
+for i in range(0,n):
+    ele=int(input())
+    lst_1.append(ele)
+print("the given list to be multiplied is:", lst_1)
+list_2=[]
+a=int(input("constant to be multiplied:"))
 #print(a)
-b=list(map(int, a))
-c=list(b)*len((z))
-print(c)
-res = list(map(operator.mul, z, c))
-print("the list after multiplication:"+str(res))
-
+#print(type(a))
+for i in range (0,len(lst_1)):
+    list_2.append(a)
+#print(list_2)
+#print(type(list_2))
+res = list(map(operator.mul, lst_1, list_2))
+print("list after multiplication:", (res))
 
